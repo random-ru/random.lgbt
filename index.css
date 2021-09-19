@@ -8,10 +8,16 @@ body {
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Roboto", "Apple Color Emoji", "Helvetica Neue", sans-serif;
+  display: grid;
+  grid-template:
+    'header' max-content
+    'main' auto / auto;
   margin: 0;
-  color: #fff;
-  background: #0F0F0F;
+  color: #ffffff;
+  background: #0f0f0f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Roboto", "Apple Color Emoji", "Helvetica Neue", sans-serif;
+  font-size: 26px;
+  line-height: 1.4;
 }
 
 .container {
@@ -24,22 +30,31 @@ body {
   padding: 0 var(--padding-size);
 }
 
+.container.height-100 {
+  height: 100%;
+}
+
 header {
+  grid-area: header;
   background: #212121;
   padding: 16px 0;
 }
 
-.chat-info {
-  display: flex;
-  align-items: center;
+main {
+  grid-area: main;
 }
 
-.chat-info .avatar {
+.avatar {
   width: 80px;
   height: 80px;
   margin-right: 20px;
   border-radius: 50%;
   overflow: hidden;
+}
+
+.chat-info {
+  display: flex;
+  align-items: center;
 }
 
 .chat-info .info {
@@ -58,4 +73,75 @@ header {
   font-size: 28px;
   line-height: 1.4;
   color: #aaaaaa;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.message:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.message.action {
+  text-align: center;
+}
+
+.message.action > .text {
+  display: inline-block;
+  padding: 0 16px;
+  border-radius: 24px;
+  background: black;
+  line-height: 45px;
+  font-weight: 400;
+}
+
+.message.default {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message.default > .avatar {
+  margin-right: 0;
+}
+
+.message.default > .content-appendix {
+  position: relative;
+  margin-left: -4px;
+  font-size: 0;
+}
+
+.message.default > .content {
+  padding: 10px 16px 12px 16px;
+  border-radius: 24px;
+  border-bottom-left-radius: 0;
+  background: #212121;
+  box-shadow: 0 2px 4px #1010109c;
+}
+
+.message.default > .content > .title {
+  color: #a695e7;
+}
+
+.message.default > .content > .embedded {
+  display: flex;
+  padding: 8px 0;
+  color: #8774e1;
+  font-weight: 300;
+}
+
+.message.default > .content > .embedded > .line-wrapper > .line {
+  width: 4px;
+  height: 100%;
+  margin-right: 16px;
+  background: #8774e1;
+  border-radius: 4px;
+}
+
+.message.default > .content > .embedded > .content > .text {
+  opacity: 0.75;
+  letter-spacing: 0.5px;
 }
