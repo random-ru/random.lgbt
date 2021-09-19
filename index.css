@@ -7,6 +7,10 @@ body {
   height: 100%;
 }
 
+html {
+  font-size: clamp(5px, 1vw, 12px);
+}
+
 body {
   display: grid;
   grid-template:
@@ -16,7 +20,7 @@ body {
   color: #ffffff;
   background: #0f0f0f;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Roboto", "Apple Color Emoji", "Helvetica Neue", sans-serif;
-  font-size: 26px;
+  font-size: 2.6rem;
   line-height: 1.4;
 }
 
@@ -46,9 +50,9 @@ main {
 }
 
 .avatar {
-  width: 80px;
-  height: 80px;
-  margin-right: 20px;
+  width: 8rem;
+  height: 8rem;
+  margin-right: 2rem;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -65,13 +69,13 @@ main {
 }
 
 .chat-info .info .title {
-  font-size: 34px;
+  font-size: 3.4rem;
   font-weight: 600;
   margin: 0;
 }
 
 .chat-info .info .status {
-  font-size: 28px;
+  font-size: 2.8rem;
   line-height: 1.4;
   color: #aaaaaa;
 }
@@ -84,7 +88,7 @@ main {
 }
 
 .message:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .message.action {
@@ -93,10 +97,10 @@ main {
 
 .message.action > .text {
   display: inline-block;
-  padding: 0 16px;
-  border-radius: 24px;
+  padding: 0 1.6rem;
+  border-radius: 2.4rem;
   background: black;
-  line-height: 45px;
+  line-height: 4.5rem;
   font-weight: 400;
 }
 
@@ -111,16 +115,16 @@ main {
 
 .message.default > .content-appendix {
   position: relative;
-  margin-left: -4px;
+  margin-left: -0.4rem;
   font-size: 0;
 }
 
 .message.default > .content {
-  padding: 10px 16px 12px 16px;
-  border-radius: 24px;
+  padding: 1rem 1.6rem 1.2rem 1.6rem;
+  border-radius: 2.4rem;
   border-bottom-left-radius: 0;
   background: #212121;
-  box-shadow: 0 2px 4px #1010109c;
+  box-shadow: 0 0.2rem 0.4rem #1010109c;
 }
 
 .message.default > .content > .title {
@@ -129,20 +133,20 @@ main {
 
 .message.default > .content > .embedded {
   display: flex;
-  padding: 8px 0;
+  padding: 0.8rem 0;
   color: #8774e1;
   font-weight: 300;
 }
 
 .message.default > .content > .embedded > .line-wrapper > .line {
-  width: 4px;
+  width: 0.4rem;
   height: 100%;
-  margin-right: 16px;
+  margin-right: 1.6rem;
   background: #8774e1;
-  border-radius: 4px;
+  border-radius: 0.4rem;
 }
 
 .message.default > .content > .embedded > .content > .text {
   opacity: 0.75;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.05rem;
 }
