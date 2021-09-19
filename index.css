@@ -194,7 +194,7 @@ main {
   display: flex;
   padding: 0.8rem 0;
   color: #8774e1;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .message.default > .content > .embedded > .line-wrapper > .line {
@@ -207,5 +207,4 @@ main {
 
 .message.default > .content > .embedded > .content > .text {
   opacity: 0.75;
-  letter-spacing: 0.05rem;
 }
