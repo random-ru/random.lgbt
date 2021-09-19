@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Roboto", "Apple Color Emoji", "Helvetica Neue", sans-serif;
+  margin: 0;
+  color: #fff;
+  background: #0F0F0F;
+}
+
+.container {
+  --content-size: 1024px;
+  --padding-size: 24px;
+
+  width: auto;
+  max-width: calc(var(--content-size) + var(--padding-size) * 2);
+  margin: 0 auto;
+  padding: 0 var(--padding-size);
+}
+
+header {
+  background: #212121;
+  padding: 16px 0;
+}
+
+.chat-info {
+  display: flex;
+  align-items: center;
+}
+
+.chat-info .avatar {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.chat-info .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chat-info .info .title {
+  font-size: 34px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.chat-info .info .status {
+  font-size: 28px;
+  line-height: 1.4;
+  color: #aaaaaa;
+}
