@@ -42,6 +42,7 @@ header {
 
 main {
   grid-area: main;
+  padding: 16px 0;
 }
 
 .avatar {
